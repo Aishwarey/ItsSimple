@@ -1,5 +1,5 @@
 from tkinter import *
-#from tkinter import filedialog
+from tkinter import filedialog
 #from tkinter import messagebox
 master = Tk()
 master.title("ItsSimple")
@@ -36,8 +36,8 @@ def open_file():
 
 def save_as():
     path = filedialog.asksaveasfilename()
-    write = open(path, 'w')
-    write.write(text.get("1.0", END))
+    file_handler = open(path, 'w')
+    file_handler.write(text.get("1.0", END))
 
 
 def rename():
